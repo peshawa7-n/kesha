@@ -4,13 +4,13 @@ from telethon import TelegramClient, events
 from urllib.parse import urlencode
 
 # --- Configuration (replace with your actual values) ---
-API_ID = APITELEGRAM_ID
-API_HASH = 'APITELEGRAM_HASH'
-BOT_TOKEN = 'BOT_TOKEN' # If you want to use a bot to interact
-PHONE_NUMBER = 'PHONE_NUMBER' # For Telethon user client (recommended for private channels)
+API_ID = os.getenv('APITELEGRAM_ID')
+API_HASH = os.getenv('APITELEGRAM_HASH')
+BOT_TOKEN = os.getenv('BOT_TOKEN') # If you want to use a bot to interact
+PHONE_NUMBER = os.getenv('PHONE_NUMBER') # For Telethon user client (recommended for private channels)
 
-STREAMTAPE_API_USERNAME = 'STREAMTAPE_API_USERNAME'
-STREAMTAPE_API_PASSWORD = 'STREAMTAPE_API_USERNAME'
+STREAMTAPE_API_USERNAME = os.getenv('STREAMTAPE_API_USERNAME')
+STREAMTAPE_API_PASSWORD = os.getenv('STREAMTAPE_API_USERNAME')
 
 # --- Initialize Telegram Client ---
 # For a user client (recommended for private channels)
